@@ -4,98 +4,133 @@
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: yellow;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+  color: #333;
 }
 
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
+/* Header */
+header {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  padding: 40px 20px;
   text-align: center;
-  color: yellow;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+/* Layout */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 20px;
+}
+
+/* Nav */
+nav {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff4b2b;
+  padding-left: 5px;
+}
+
+/* Article */
+article {
+  flex: 2;
+  min-width: 300px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+article h1 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
+  section {
+    flex-direction: column;
   }
 }
 </style>
 </head>
+
 <body>
 
-
 <header>
-  <h2>First class of my django</h2>
+  First class of my Django 🚀
 </header>
 
 <section>
+
   <nav>
     <ul>
-      <li><a href="www.youtube.com/@tanujanishandar">YouTube</a></li>
-      <li><a href="www.linkedin.com/in/tanujanishandar/">LinkedIn</a></li>
-      <li><a href="https://telegram.me/tanujanishandar">Telegram</a></li>
+      <li><a href="https://www.youtube.com/@tanujanishandar" target="_blank">YouTube</a></li>
+      <li><a href="https://www.linkedin.com/in/tanujanishandar/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://telegram.me/tanujanishandar" target="_blank">Telegram</a></li>
     </ul>
   </nav>
-  
+
   <article>
     <h1>Agenda</h1>
-    <p>Iam learning devops and this is demo of my learning</p>
-    <p>Please wish me luck to land on a great job</p>
+    <p>I am learning DevOps and this is a demo of my learning.</p>
+    <p>Please wish me luck to land a great job 🚀</p>
   </article>
+
 </section>
 
 <footer>
-  <p>@TanujaNishandar</p>
+  @TanujaNishandar
 </footer>
 
 </body>
 </html>
-
